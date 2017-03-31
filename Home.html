@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css"
+			href="CSS.css" />
+
+		<title>Galway Gadgetz Home</title>
+		
+		<div id="clock" style="position:relative; left:320px; top:-60px;">
+		<script>
+			function clock() {
+					var today = new Date();
+					var hours = today.getHours();
+					var minutes = today.getMinutes();
+					var seconds = today.getSeconds();
+					minutes = checkTime(minutes);
+					seconds = checkTime(seconds);
+					document.getElementById('txt').innerHTML = hours+":"+minutes+":"+seconds;
+					var time = setTimeout(clock, 500);
+								}
+					function checkTime(i) {
+					if (i < 10) {i = "0" + i};
+					return i;
+				}
+		</script>
+		</div>
+		
+		<script type = "text/javascript">
+          function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 3000);
+          }
+
+          var images = [], x = -1;
+          images[0]  = "wii.jpg";
+          images[1] = "samapple.jpeg";
+          images[2] = "consoles.jpg";
+      </script>
+   
+		
+	</head>
+	
+	<body onload = "startTimer()">
+       <img id="img" src="iphone.jpg" height="150" width="250"  align="right"/>
+       
+   </body>
+   
+	<body onload="clock()">
+
+		<div id="txt" align = "left"></div>
+			
+
+	</body>
+	<body>
+		<h1><b>Galway Gadgetz<br><br>Home</b></h1>
+		<p>
+		Welcome to our online store.<br>New outlets opening in Dublin and Kilkenny soon!!<br>New Year sale ends on the 4th of February!! <br><br> Here are the links to each section of our site:
+		</p>
+		<ul> 
+			<li><a href="About us.html" target="_blank">About Us</a></li>
+			<li><a href="Contact Info.html" target="_blank">Contact Info</a></li>
+			<li><a href="Special Offers.html" target="_blank">Special Offers</a></li>
+			<li><a href="Useful Links .html" target="_blank">Useful Links</a></li>
+		</ul>
+			
+			<center><img src="gadgetz.jpg" alt="what image shows" height="150" width="400"></center>
+
+
+			
+	</body>	
+</html> 
